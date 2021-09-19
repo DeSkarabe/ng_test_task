@@ -1,0 +1,15 @@
+<div class="container d-flex m-2 w-100 flex-wrap">
+    <button class="btn btn-secondary d-flex mr-3 mb-3 mt-3 p-2 rounded" (click)="changeSort(1)">Sort ASC</button>
+    <button class="btn btn-secondary d-flex m-3 p-2 rounded" (click)="changeSort(0)">Sort DSC</button>
+</div>
+<div class="container d-flex m-2 w-100 flex-wrap">Currently {{sortedBy}}</div>
+<div class="container d-flex w-100 flex-wrap">
+    <ng-container *ngFor="let p of posts">
+        <a class="asText card d-md-flex p-2 m-1 w-25 shadow p-3 mb-5 bg-white rounded" 
+            [routerLink]="['/post/'+p.id]" routerLinkActive="router-link-active">
+            <div class="font-weight-bold">{{p.name}}</div>
+            <div>Category: {{p.category}}</div>
+            <div>{{p.message}}</div>
+        </a>
+    </ng-container>
+</div>

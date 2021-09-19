@@ -1,0 +1,6 @@
+<div class="container d-flex w-100">
+    <div class="card d-md-flex p-2 m-1 w-100 shadow p-3 mb-5 bg-white rounded btn" 
+        *ngFor="let c of categories" (click)="selectCategory(c.name)">
+        <div class="font-weight-bold" >{{c.name}}</div>
+    </div>
+</div>
